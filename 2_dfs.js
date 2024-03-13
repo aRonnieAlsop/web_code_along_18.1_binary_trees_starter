@@ -8,7 +8,21 @@ class node {
 
 function traverse(root) {
   // Implement
+  const result = []
+  dFt(root, result)
+  return result
 }
+
+  function dFt(current, result) {
+    if (current.left) {
+      dFt(current.left, result)
+    }
+    result.push(current.value)
+    if (current.right) {
+      dFt(current.right, result)
+    }
+  }
+
 
 // Test cases:
 const head = new node(6)
